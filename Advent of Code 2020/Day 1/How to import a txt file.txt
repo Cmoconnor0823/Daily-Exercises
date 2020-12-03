@@ -1,0 +1,6 @@
+const fs = require('fs')
+let dataArr;
+fs.readFile('./input.txt', (err, data) => {
+  dataArr = data.toString().split('\n')
+  console.log(dataArr)
+})
