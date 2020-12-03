@@ -1,8 +1,50 @@
+//12/02/20
+// Create a function that returns a capitalized version of the string passed. The first letter of 
+// each word in the string should be capitalized while the rest of each word should be lowercase.
+// Examples
+// emphasise("hello world") ➞ "Hello World"
+// emphasise("GOOD MORNING") ➞ "Good Morning"
+// emphasise("99 red balloons!") ➞ "99 Red Balloons!"
+// Notes
+// You won't run into any issues when dealing with numbers in strings.
+// String.prototype.split(),  String.prototype.toUpperCase(), Array.prototype.join(),
+// String.prototype.toLowerCase()
+
+// const emphasise = (str) => str.split().toUpperCase(0);
+// function emphasize(str) {
+//   let newStr = str.toLowerCase().split(' ').map((x) => {
+//     let word = x.split('')
+//     word[0] = word[0].toUpperCase()
+//     return word.join('')
+//   })
+//   return newStr.join(' ')
+// }
+function emphasize(str) {
+  return str.length === 0 ? '': str.split(" ")
+  .map(word=>word[0].toUpperCase() + word.substring(1).toLowerCase())
+  .join(' ')
+}
+
+
+
+function emphasize(str) {
+  return str.toLowerCase().replace(/\b./g, x=> x.toUpperCase())
+}
+console.log(emphasize("hello world"))
+
+
+// const b = String.prototype.toUpperCase.call(true);
+
+// // prints out 'ABCDEF TRUE'.
+// console.log(a, b);
+
+
+
 //12/01/20
 // 
 //	Examples
 // const whichIsLarger = (f, g) => f() > g() ? "f" : f() < g() ? "g": "neither"
-const whichIsLarger = (f, g) =>  f() > g() && "f" || f() < g() && "g" || "neither"
+// const whichIsLarger = (f, g) =>  f() > g() && "f" || f() < g() && "g" || "neither"
 // function whichIsLarger(f, g){
 //   if(f() > g()){
 //     return "f"
@@ -12,9 +54,9 @@ const whichIsLarger = (f, g) =>  f() > g() && "f" || f() < g() && "g" || "neithe
 //   return "neither"
 // }
 
-console.log(whichIsLarger(() => 5, () => 10)) //➞ "g"
-console.log(whichIsLarger(() => 25,  () => 25)) //➞ "neither"
-console.log(whichIsLarger(() => 505050, () => 5050))//➞ "f"
+// console.log(whichIsLarger(() => 5, () => 10)) //➞ "g"
+// console.log(whichIsLarger(() => 25,  () => 25)) //➞ "neither"
+// console.log(whichIsLarger(() => 505050, () => 5050))//➞ "f"
 //		Notes
 //if...else, Conditional (ternary) Operator, Higher order functions in W3 schools or the Pdf of Eloquent 
 //JavaScript chapter 5 in Shared drive> Resources> 02-JavaScript > Books >Eloquent_JavaScript
