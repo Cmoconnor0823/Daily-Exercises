@@ -1,3 +1,54 @@
+//12/7/2020
+// Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
+// Examples
+// getAbsSum([2, -1, 4, 8, 10]) ➞ 25
+// getAbsSum([-3, -4, -10, -2, -3]) ➞ 22
+// getAbsSum([2, 4, 6, 8, 10]) ➞ 30
+// getAbsSum([-1]) ➞ 1
+
+// Notes
+// The term "absolute value" means to remove any negative sign in front of a number, and to think of all numbers as positive (or zero).
+// All the elements in the given array are integers.
+// Array.prototype.reduce(), Math.abs(),  Arrow Functions
+
+
+function getAbsSum(args){
+    // return args.reduce((a, b) => Math.abs(a) + Math.abs(b),0)
+    let answer = 0;
+    for(let i = 0; i < args.length; i++){
+        let currentItem = args[i] 
+        if ( currentItem < 0 ){
+            currentItem *= -1
+        }
+        answer += currentItem
+    }
+    return answer
+}
+
+
+
+console.log(getAbsSum([2, -1, 4, 8, 10])) //➞ 25
+console.log(getAbsSum([-3, -4, -10, -2, -3]))  // ➞ 22
+console.log(getAbsSum([2, 4, 6, 8, 10])) // ➞ 30
+console.log(getAbsSum([-1])) // ➞ 1)
+//12/4/2020
+/*~The sentence always starts with "Make me".
+~Try to solve this without using conditional statements like if/else or switch.
+~String.prototype.replace(), 
+~Template literals (Template strings) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals, 
+~String.prototype.split(), 
+~Working with objects- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
+*/
+//const
+
+// const emotify =(arg) => arg.replace("smile", ":D").replace(/grin/i, ":)").replace(/sad/i, ":(");
+
+
+
+// console.log(emotify("Make me smile"))// ➞ "Make me :D"
+// console.log(emotify("Make me grin"))// ➞ "Make me :)"
+// console.log(emotify("Make me sad"))// ➞ "Make me :("
+
 //~~~~~12/03/2020
 // Given an array of scrabble tiles, create a function that outputs the 
 //maximum possible score a player can achieve by summing up the total 
@@ -21,28 +72,28 @@
 // Here, each tile is represented as an object with two keys: tile and 
 // score. Look into using Array.prototype.reduce()
                                             //accum    value, set a to 0
-const maximumScore = arr => arr.reduce((a, b) => a + b.score, '');
+//const maximumScore = arr => arr.reduce((a, b) => a + b.score, '');
 //                  //args           accum   value
 // 1+5+10 and so on
 
-console.log(maximumScore([
-  { tile: "N", score: 1 },
-  { tile: "K", score: 5 },
-  { tile: "Z", score: 10 },
-  { tile: "X", score: 8 },
-  { tile: "D", score: 2 },
-  { tile: "A", score: 1 },
-  { tile: "E", score: 1 }
-])) //➞ 28
-console.log(maximumScore([
-  { tile: "B", score: 2 },
-  { tile: "V", score: 4 },
-  { tile: "F", score: 4 },
-  { tile: "U", score: 1 },
-  { tile: "D", score: 2 },
-  { tile: "O", score: 1 },
-  { tile: "U", score: 1 }
-])) //➞ 15
+// console.log(maximumScore([
+//   { tile: "N", score: 1 },
+//   { tile: "K", score: 5 },
+//   { tile: "Z", score: 10 },
+//   { tile: "X", score: 8 },
+//   { tile: "D", score: 2 },
+//   { tile: "A", score: 1 },
+//   { tile: "E", score: 1 }
+// ])) //➞ 28
+// console.log(maximumScore([
+//   { tile: "B", score: 2 },
+//   { tile: "V", score: 4 },
+//   { tile: "F", score: 4 },
+//   { tile: "U", score: 1 },
+//   { tile: "D", score: 2 },
+//   { tile: "O", score: 1 },
+//   { tile: "U", score: 1 }
+// ])) //➞ 15
 
 
 //~~~~~12/02/20
