@@ -1,3 +1,69 @@
+//Create a function that determines whether a shopping order is eligible for free shipping.
+// An order is eligible for free shipping if the total cost of items purchased exceeds $50.00.
+
+//Examples
+freeShipping({ "Shampoo": 5.99, "Rubber Ducks": 15.99 }) //➞ false
+
+freeShipping({ "Flatscreen TV": 399.99 })/// ➞ true/
+
+freeShipping({ "Monopoly": 11.99, "soad-pop": 2.99, "tide": 11.50})// false
+function freeShipping(obj){
+  // collect all values
+  // add values
+  //check total if exceeds $50
+  // return true or false  
+}
+
+
+
+
+//12/10/2020
+
+// Given an array and an integer n, return the sum of the first n numbers in the array. 
+// Example
+//sliceSum([9, 8, 7, 6], 3)// ➞ 24
+// The parameter n is specified as 3.
+// The first 3 numbers in the list are 9, 8 and 7.
+// The sum of these 3 numbers is 24 (9 + 8 + 7).
+// Return the answer.
+
+//Examples
+
+//const sliceSum = (arr, num) => arr.slice(0, num).reduce((x,y) => y + x,0);
+
+function sliceSum(a, b){
+    let sum = 0;
+    let c = a.slice(0, b)
+    console.log(c)
+    for(let i = 0; i < c.length; i++){
+        sum += a[i];
+    }
+    return sum;
+}
+
+console.log(sliceSum([1, 3, 2], 2))// ➞ 4
+console.log(sliceSum([4, 2, 5, 7], 4))// ➞ 18
+console.log(sliceSum([3, 6, 2], 0))// ➞ 0
+
+
+
+
+
+
+
+
+
+
+// Notes
+// If n is larger than the length of the array, return the sum of the whole array.
+// Hints:
+// Array.prototype.reduce(), Array.prototype.slice(),Array.prototype.length 
+
+
+
+
+
+
 //12/9/20
 
 // A word is on the loose and now has tried to hide amongst a crowd of tall letters!
