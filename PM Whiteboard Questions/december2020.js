@@ -1,3 +1,63 @@
+//12/9/20
+
+// A word is on the loose and now has tried to hide amongst a crowd of tall letters!
+// Help write a function to detect what the word is, knowing the following rules:
+// The wanted word is in lowercase.
+// The crowd of letters is all in uppercase.
+// Note that the word will be spread out amongst the random letters, but their letters remain in the same order.
+
+// Examples
+
+
+//const  detectWord = str => str.match(/[a-z]/g).join("");
+
+
+// Resources- String.prototype.match(), Array.prototype.join(), String.prototype.includes(), Array.prototype.filter(), Spread syntax (...), String.prototype.replace(), String.prototype.toLowerCase()
+
+// function detectWord(str){
+//     let wanted = "";
+//     for(let letter of str){
+//         if(letter === letter.toLowerCase()){
+//             wanted += letter
+//         }
+//     }
+    
+//     return wanted
+// }
+
+// console.log(detectWord("UcUNFYGaFYFYGtNUH"))// ➞ "cat"
+// console.log(detectWord("bEEFGBuFBRrHgUHlNFYaYr"))// ➞ "burglar"
+// console.log(detectWord("YFemHUFBbezFBYzFBYLleGBYEFGBMENTment"))// ➞ "embezzlement"
+
+
+
+
+// 12/8/2020
+// Create a function that takes in an array of numbers and returns the sum of its cubes.
+// const sumOfCubes = (arr) => arr.reduce((x, y) => Math.pow(y, 3) + x, 0)
+
+// function sumOfCubes(a){
+// let result = 0;
+
+// a.forEach((e, i)=> result += e ** 3)
+
+// // for(let i = 0; i < a.length; i++){
+// //     result += a[i] ** 3;
+// // }
+// return result;
+// }
+
+// console.log(sumOfCubes([1, 5, 9])) //➞ 855
+// // Since 1^3 + 5^3 + 9^3 = 1 + 125 + 729 = 855
+
+// console.log(sumOfCubes([3, 4, 5]))// ➞ 216
+// console.log(sumOfCubes([2])) //➞ 8
+// console.log(sumOfCubes([])) //)➞ 0
+/*
+Notes
+If given an empty array, return 0.
+Check out the documentation on Math.pow(), Array.prototype.reduce(), Array.prototype.map(),Exponentiation (**), Array.prototype.forEach()
+/*
 //12/7/2020
 // Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
 // Examples
@@ -12,25 +72,23 @@
 // Array.prototype.reduce(), Math.abs(),  Arrow Functions
 
 
-function getAbsSum(args){
-    // return args.reduce((a, b) => Math.abs(a) + Math.abs(b),0)
-    let answer = 0;
-    for(let i = 0; i < args.length; i++){
-        let currentItem = args[i] 
-        if ( currentItem < 0 ){
-            currentItem *= -1
-        }
-        answer += currentItem
-    }
-    return answer
-}
+// function getAbsSum(args){
+//     // return args.reduce((a, b) => Math.abs(a) + Math.abs(b),0)
+//     let answer = 0;
+//     for(let i = 0; i < args.length; i++){
+//         let currentItem = args[i] 
+//         if ( currentItem < 0 ){
+//             currentItem *= -1
+//         }
+//         answer += currentItem
+//     }
+//     return answer
+// }
 
-
-
-console.log(getAbsSum([2, -1, 4, 8, 10])) //➞ 25
-console.log(getAbsSum([-3, -4, -10, -2, -3]))  // ➞ 22
-console.log(getAbsSum([2, 4, 6, 8, 10])) // ➞ 30
-console.log(getAbsSum([-1])) // ➞ 1)
+// console.log(getAbsSum([2, -1, 4, 8, 10])) //➞ 25
+// console.log(getAbsSum([-3, -4, -10, -2, -3]))  // ➞ 22
+// console.log(getAbsSum([2, 4, 6, 8, 10])) // ➞ 30
+// console.log(getAbsSum([-1])) // ➞ 1)
 //12/4/2020
 /*~The sentence always starts with "Make me".
 ~Try to solve this without using conditional statements like if/else or switch.
